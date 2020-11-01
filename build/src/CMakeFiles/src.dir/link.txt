@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/src.dir/main.cpp.o  -o src -Wl,-rpath,/usr/local/lib /usr/local/lib/libosqp.so /usr/local/lib/libosqp.a 
