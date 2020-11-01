@@ -16,7 +16,7 @@ git clone --recurse-submodules https://github.com/oxfordcontrol/osqp-python
 cd osqp-python
 python setup.py install
 ```
-If the above procedure doesn't work do check the actual library here [a link] (https://osqp.org/docs/get_started/python.html)
+If the above procedure doesn't work do check the actual library [here](https://osqp.org/docs/get_started/python.html)
 
 # Install
 Now we are ready to install current library
