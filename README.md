@@ -16,4 +16,10 @@ cd osqp-python
 python setup.py install
 
 ```
+Ignore other files as we are developing code in python
+
+Please look into src->mpc_lab.py
+this is the basic mpc horizon tracking example we had in matlab (provided by professor)
+
+
 
