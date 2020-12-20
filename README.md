@@ -22,18 +22,31 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
 
 ### Hardware
 #### 1. Manual_line_track.ino
-  (Please upload manual_line_track_slave.ino to the slave Nano first)
+  (Please upload Manual_line_track_slave.ino to the slave Nano first)
   (Upload Manual_line_track.ino to the master Nano. Set up hotspot on a mobile phone. On laptop open Putty and connect to the Raspberry Pi over the hotspot. This will open up     mini-com which the user can use to give manual commands.)
   There are two possible modes of operation of the robot.
   ##### 1.1. Manual Mode 
-        When switched on for the first time, robot boots up in the manual mode. In this mode the robot moves as follows:
+        When switched on for the first time, robot boots up in the manual mode. If in correction mode press 'M' or 'm' to switch to manual mode. 
+        In this mode the robot moves as follows:
         1.1.a. Press 'W' or 'w' to move the robot forward.
         1.1.b. Press 'S' or 's' to move the robot in reverse.
         1.1.c. Press 'A' or 'a' to turn the robot left in its current position.
         1.1.d. Press 'D' or 'd' to turn the robot right in its current position.
         1.1.e. Press 'Q' or 'q' to balance the robot in its current position.
-  
-
+  ##### 1.2. Correction Mode (fully autonomous)
+        Press 'C' or 'c' to switch from manual mode to correction mode. 
+        In this mode, the user looses manual control of the robot. The user can only press 'M' or 'm' to switch back to manual mode.
+        To run the robot in this mode, user will have to define a path on the ground with a tape (Dark tape on a light ground). The ground should not have any other lines or             patterns which could interfere with the Pixy's line tracking algorithm.
+        Once setup is done, the robot will automatically track the line using reading obtained by the Pixy.
+        
+#### 2. Manual_line_track_slave.ino
+    Upload this to the slave Nano when running Manual_line_track.ino in the master. This will send the x coordinate of the vector that is being tracked by the Pixy to the           master. This code only comes into play when user is running the robot in Correction mode. 
+        
+#### 3. MPC.ino
+    (Open MPC_robot_square_wave.mlx in MATLAB on a computer)
+    This code will send currently calculated states to MATLAB running on a computer. MATLAB will then send the reference velocities to the master. 
+    This mode is also fully autonomous where user cannot interact with the ino.
+   
 
 ### Conclusions
 In conclusion the Tumbller was able to balance and followlines  with  a  PD  controller  effectively.  For  the  final  demothe  team  was  able  to  incorporate  obstacle  detection  and  afollower  robot.  In  terms  of  MPC  the  robot  was  able  to  tracka  line  of  fixed  distance.  Full  robot  MPC  was  not  achieveddue  to  the  communication  delays  encountered  in  parsing  theincoming data stream. From the limited testing performed dueto restricted on campus access the robot had a wide range offunctionality.  This  aligned  with  the  team’s  goal  of  making  ascaled  version  of  a  self  balancing  multi-agent  robot  systemthat is able to function in as an automated guided vehicle.
