@@ -47,6 +47,7 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
     This code will send currently calculated states to MATLAB running on a computer. MATLAB will then send the reference velocities to the master. 
     This mode is also fully autonomous where user cannot interact with the ino.
    
+The MPC mode is setup to take a reference velocity from the MATLAB script and track it using inner PI controller for velocity. The balancing is achieved using a PD control for tilt. The MATLAB script reads the states from the serial device (Raspberry Pi) and is fed as the start-point of the MPC formulation. Based on this and the reference square wave velocity it has to track, the MPC is formulated such that it provides the reference velocity while ensuring constraints on control effort [-12,12]V and maximum tilt angle. 
 
 ### Conclusions
 In conclusion the Tumbller was able to balance and followlines  with  a  PD  controller  effectively.  For  the  final  demothe  team  was  able  to  incorporate  obstacle  detection  and  afollower  robot.  In  terms  of  MPC  the  robot  was  able  to  tracka  line  of  fixed  distance.  Full  robot  MPC  was  not  achieveddue  to  the  communication  delays  encountered  in  parsing  theincoming data stream. From the limited testing performed dueto restricted on campus access the robot had a wide range offunctionality.  This  aligned  with  the  team’s  goal  of  making  ascaled  version  of  a  self  balancing  multi-agent  robot  systemthat is able to function in as an automated guided vehicle.
