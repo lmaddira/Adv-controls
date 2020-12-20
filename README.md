@@ -17,7 +17,6 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
 5. Run MPC_feedforward_velocity.mlx first and then MPC_feedforward_velocity.slx to visualise the simscape nonlinear model behaviour. In this model we have veocity, tilt and rate of tilt as the statespace and here we track position using MPC feedforward reference tracking with a innerloop PD controller module.
 6. Position Tracking Feedback_linearplant.mlx implements feedback controller with MPC statespace as position,velocity,tilt and rate of tilt and additional PD controller for heading angle. Here we update the MPC with linearised plant equations instead of nonlinear plant.Please run the Position Tracking Feedback_linearplant.mlx to implement and visualise the tracking.
 7. Position Tracking Feedforward_linearplant.mlx implements feedback controller with feedforward reference tracking MPC statespace as position,velocity,tilt and rate of tilt with inner loop PID controller and an additional PD controller for heading angle. Here we update the MPC with linearised plant equations instead of nonlinear plant.Please run the Position Tracking Feedback_linearplant.mlx to implement and visualise the tracking.
-8. Refer to Arduino folder README.md to understand the implemtation of Aurdino and PI modules on Hardware
 
 
 ### Arduino
