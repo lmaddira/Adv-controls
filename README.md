@@ -20,7 +20,7 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
 8. Refer to Arduino folder README.md to understand the implemtation of Aurdino and PI modules on Hardware
 
 
-### Hardware
+### Arduino
 #### 1. Manual_line_track.ino
   (Please upload Manual_line_track_slave.ino to the slave Nano first)
   (Upload Manual_line_track.ino to the master Nano. Set up hotspot on a mobile phone. On laptop open Putty and connect to the Raspberry Pi over the hotspot. This will open up     mini-com which the user can use to give manual commands.)
