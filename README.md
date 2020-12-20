@@ -25,13 +25,13 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
   (Please upload manual_line_track_slave.ino to the slave Nano first)
   (Upload Manual_line_track.ino to the master Nano. Set up hotspot on a mobile phone. On laptop open Putty and connect to the Raspberry Pi over the hotspot. This will open up     mini-com which the user can use to give manual commands.)
   There are two possible modes of operation of the robot.
-  ##### 1. Manual Mode 
+  ##### 1.1. Manual Mode 
   When switched on for the first time, robot boots up in the manual mode. In this mode the robot moves as follows:
-  a. Press 'W' or 'w' to move the robot forward.
-  b. Press 'S' or 's' to move the robot in reverse.
-  c. Press 'A' or 'a' to turn the robot left in its current position.
-  d. Press 'D' or 'd' to turn the robot right in its current position.
-  e. Press 'Q' or 'q' to balance the robot in its current position.
+  1.1.a. Press 'W' or 'w' to move the robot forward.
+  1.1.b. Press 'S' or 's' to move the robot in reverse.
+  1.1.c. Press 'A' or 'a' to turn the robot left in its current position.
+  1.1.d. Press 'D' or 'd' to turn the robot right in its current position.
+  1.1.e. Press 'Q' or 'q' to balance the robot in its current position.
   
 
 
