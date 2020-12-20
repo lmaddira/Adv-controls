@@ -19,6 +19,21 @@ This  paper  presents  the  work  done  on  designingand  implementing  a  nonli
 7. Position Tracking Feedforward_linearplant.mlx implements feedback controller with feedforward reference tracking MPC statespace as position,velocity,tilt and rate of tilt with inner loop PID controller and an additional PD controller for heading angle. Here we update the MPC with linearised plant equations instead of nonlinear plant.Please run the Position Tracking Feedback_linearplant.mlx to implement and visualise the tracking.
 8. Refer to Arduino folder README.md to understand the implemtation of Aurdino and PI modules on Hardware
 
+
+### Hardware
+## 1. Manual_line_track.ino
+  (Please upload manual_line_track_slave.ino to the slave Nano first)
+  (Upload Manual_line_track.ino to the master Nano. Set up hotspot on a mobile phone. On laptop open Putty and connect to the Raspberry Pi over the hotspot. This will open up     mini-com which the user can use to give manual commands.)
+  There are two possible modes of operation of the robot.
+  # 1. Manual Mode - When switched on for the first time, robot boots up in the manual mode. In this mode the robot moves as follows:
+  a. Press 'W' or 'w' to move the robot forward
+  b. Press 'S' or 's' to move the robot in reverse
+  c. Press 'A' or 'a' to turn the robot left in its current position
+  d. Press 'D' or 'd' to turn the robot right in its current position
+  e. Press 'Q' or 'q' to balance the robot in its current position
+  
+
+
 ### Conclusions
 In conclusion the Tumbller was able to balance and followlines  with  a  PD  controller  effectively.  For  the  final  demothe  team  was  able  to  incorporate  obstacle  detection  and  afollower  robot.  In  terms  of  MPC  the  robot  was  able  to  tracka  line  of  fixed  distance.  Full  robot  MPC  was  not  achieveddue  to  the  communication  delays  encountered  in  parsing  theincoming data stream. From the limited testing performed dueto restricted on campus access the robot had a wide range offunctionality.  This  aligned  with  the  team’s  goal  of  making  ascaled  version  of  a  self  balancing  multi-agent  robot  systemthat is able to function in as an automated guided vehicle.
 
